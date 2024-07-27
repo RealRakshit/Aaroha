@@ -1,0 +1,164 @@
+#logo{
+    position: relative;
+    top:10px;
+    background-color: #274c77;
+}
+#header{
+    position: relative;
+    top: -200px;
+
+}
+
+#logo-name{
+    padding-left: 550px;
+}
+
+#cover{
+    height: 700px;
+    width: 1500px;
+}
+
+#texty{
+    position: relative;
+    top: -450px;
+    color: aliceblue;
+    font-size: 80px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust position */
+    width: 500px; /* Optional: keep width if needed */
+    transition: 1s;
+}
+
+#texty:hover{
+    text-shadow: 2px 2px 10px lightblue;
+    color: #274c77;
+}
+#txt{
+    color: #274c77;
+    width: 1000px;
+    text-align: center;
+    padding-left: 250px;
+    text-shadow: 10px 10px 10px lightblue;
+}
+#nav{
+    
+    padding-left: 670px;
+}
+
+#woo{
+    padding-left: 620px;
+    font-size: 70px;
+    color:#274c77;
+    text-shadow: 10px 10px 10px lightblue;
+}
+
+.button1{
+    background-color: white; 
+    border: 1px solid lightblue;
+    transition: 0.5s;
+}
+.button1:hover{
+    box-shadow: 2px 2px 10px lightblue;
+    color: #274c77;
+}
+
+.button2{
+    background-color: white; 
+    border: 1px solid lightblue;
+    transition: 0.5s;
+}
+.button2:hover{
+    box-shadow: 2px 2px 10px lightblue;
+    color: #274c77;
+}
+
+.button3{
+    background-color: white; 
+    border: 1px solid lightblue;
+    transition: 0.5s;
+}
+.button3:hover{
+    box-shadow: 2px 2px 10px lightblue;
+    color: #274c77;
+}
+
+#event-text{
+    padding-left: 350px;
+    font-size: 70px;
+    color:#274c77;
+    text-shadow: 10px 10px 10px lightblue;
+}
+#card-box{
+    display: flex;
+    width: 1300px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+#card1{
+    margin-left: 250px;
+    display:inline-block;
+    border: 1px solid lightblue;
+    background-color: grey;
+    width: 400px;
+    height: 550px;
+    /* margin: 20px; */
+    box-shadow: 10px 10px 10px lightblue;
+}
+#card2{
+    display:inline-block;
+    border: 1px solid lightblue;
+    background-color: grey;
+    width: 400px;
+    height: 550px;
+    margin: 50px;
+    box-shadow: 10px 10px 10px lightblue;
+}
+#card3{
+    display:inline-block;
+    border: 1px solid lightblue;
+    background-color: grey;
+    width: 400px;
+    height: 550px;
+    margin-right: 70px;
+    box-shadow: 10px 10px 10px lightblue;
+}
+#img1{
+    width: 300px;
+    height: 150px;
+}
+
+#txt1{
+    text-align: center;
+    color: aliceblue;
+}
+
+#img2{
+    width: 300px;
+    height: 150px;
+}
+
+#txt2{
+    text-align: center;
+    color: aliceblue;
+}
+
+#img3{
+    width: 300px;
+    height: 150px;
+}
+
+#txt3{
+    text-align: center;
+    color: aliceblue;
+}
+
+#but{
+    background-color:#274c77;
+    color: aliceblue;
+    width: 200px;
+    height: 80px;
+    margin-left: 650px;
+    font-size: 20px;
+}
