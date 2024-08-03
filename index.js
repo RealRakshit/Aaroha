@@ -1,7 +1,8 @@
 const express = require("express");
 const app= express();
+require('dotenv').config();
 
-let port=8080;
+
 
 const path=require("path"); 
 
@@ -21,7 +22,7 @@ main()
 .catch((err)=>console.log(err));
 
 async function main(){
-    await mongoose.connect("mongodb://127.0.0.1:27017/userdata");
+    await mongoose.connect(process.env.DATABASE_URI);
 }
 
 const userSchema=new mongoose.Schema({
@@ -30,11 +31,18 @@ const userSchema=new mongoose.Schema({
     scholarnumber:String
 });
 
-const Userdata=mongoose.model("Userdata",userSchema);
+// const Userdata=mongoose.model("Userdata",userSchema); //new collection
+const users=mongoose.model("users",userSchema);
 
+mongoose.connection.once('open',()=>{
+    console.log('conneted 1')
+    app.listen(process.env.PORT,()=>{
+        console.log("listening");
+    })
+})
 
-app.listen(port,()=>{
-    console.log("listening");
+mongoose.connection.on('error',err=>{
+    console.log(err);
 })
 
 app.get("/",(req,res)=>{
@@ -47,8 +55,8 @@ app.get("/register",(req,res)=>{
 
 app.post("/register",(req,res)=>{
     let{username,phonenumber,scholarnumber}=req.body;
-    Userdata.create({username,phonenumber,scholarnumber});
-    Userdata.find().then(res => {
+    users.create({username,phonenumber,scholarnumber});
+    users.find().then(res => {
         console.log(res);
     }).catch(err => {
         console.error(err);
