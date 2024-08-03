@@ -2,7 +2,7 @@ const express = require("express");
 const app= express();
 require('dotenv').config();
 
-
+const port=process.env.PORT;
 
 const path=require("path"); 
 
@@ -36,7 +36,7 @@ const users=mongoose.model("users",userSchema);
 
 mongoose.connection.once('open',()=>{
     console.log('conneted 1')
-    app.listen(process.env.PORT,()=>{
+    app.listen(port,()=>{
         console.log("listening");
     })
 })
@@ -44,7 +44,6 @@ mongoose.connection.once('open',()=>{
 mongoose.connection.on('error',err=>{
     console.log(err);
 })
-
 app.get("/",(req,res)=>{
     res.render("home.ejs");
 });
